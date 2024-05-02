@@ -40,7 +40,11 @@
 				<img src="img/logo.png" alt="">
 			</a>
 			<div class="user-panel">
-				<a href="#">Login</a>  /  <a href="#">Register</a>
+			@if (Auth::check())
+				<a href="{{ route('logout') }}">Logout</a>  
+				@else
+			     <a href="{{ route('login') }}">Login</a>/  <a href="{{ route('register') }}">Register</a>
+			@endif
 			</div>
 			<!-- responsive -->
 			<div class="nav-switch">

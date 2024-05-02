@@ -26,7 +26,7 @@ class AuthController extends Controller
               // jika user nya memiliki level user
             else if($user->level =='user'){
                // arahkan ke halaman user
-                return redirect()->intended('user');
+                return redirect()->intended('/');
             }
 
         }
@@ -56,7 +56,7 @@ class AuthController extends Controller
             }
                 // tapi jika level user nya user biasa maka arahkan ke halaman user
                else if($user->level =='user'){
-                return redirect()->intended('user');
+                return redirect()->intended('/');
             }
              // jika belum ada role maka ke halaman /
             return redirect()->intended('/');
